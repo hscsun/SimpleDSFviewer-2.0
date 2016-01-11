@@ -2444,7 +2444,7 @@ function plotFDTmsave_Callback(hObject, eventdata, handles)
   %save the processed data for custom figures
 function saveimage_Callback(hObject, eventdata, handles)
 
-global biggest maxsmresult  mediposi
+global biggest maxsmresult  mediposi te
  
  aaa=['A1';'A2';'A3';'A4';'A5';'A6';'A7';'A8';'A9'];
  bbb=['A10';'A11';'A12'];
@@ -2463,7 +2463,7 @@ global biggest maxsmresult  mediposi
  kkk=['H1';'H2';'H3';'H4';'H5';'H6';'H7';'H8';'H9'];
  kkk2=['H10';'H11';'H12'];
 names=[cellstr(aaa);cellstr(bbb);cellstr(ccc);cellstr(ccc2);cellstr(ddd);cellstr(ddd2);cellstr(eee);cellstr(fff);cellstr(ggg);cellstr(ggg2);cellstr(hhh);cellstr(hhh2);cellstr(iii);cellstr(jjj);cellstr(kkk);cellstr(kkk2)];
-TmFD=biggest;TmSmoothFD=maxsmresult;TmDT50=mediposi;
+TmFD=biggest;TmSmoothFD=maxsmresult;TmDT50=te(mediposi);
 save('Tm.mat','TmFD','TmSmoothFD','TmDT50','names')
 
  
